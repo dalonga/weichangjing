@@ -1,0 +1,140 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/*音乐部分*/
+#music{
+    position: fixed;
+    right: 6%;
+    top: 6%;
+    z-index: 9;
+}
+
+.music_bg{
+    position: absolute;
+    right: -20px;
+    top:-20px;
+    z-index: 9;
+    width: 60px;
+    height: 60px;
+
+}
+.music_pic{
+    right: 8px;
+    top:8px;
+
+}
+#music .music_pic{
+     animation: run  linear infinite 1s;
+ }
+@keyframes run {
+    0%{
+        transform: rotate(0deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/*音乐部分*/
+/*分页器*/
+
+.swiper-button-next{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    top: auto;
+    transform: rotateZ(-92deg);
+    animation:tiao 1s linear infinite;
+}
+@keyframes tiao{
+    from{
+        bottom: 1%;
+        opacity: 1;
+    }
+    to{
+        bottom: 5%;
+        opacity: 0;
+    }
+}
+
+/*分页器*/
+
+/*第一屏*/
+.swiper-slide.one{
+    background: url("../img/liuxian.gif");
+    background-size:100% 100% ;
+}
+.one-yaoqing{
+    width: 95%;
+    height: 50%;
+    position: relative;
+}
+.one-ji{
+    position: absolute;
+    animation:run linear infinite 4s;
+}
+@keyframes run{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.one-lou{
+    position: absolute;
+    top:80%;
+}
+.one-sbsh{
+    color: #fff;
+    position: fixed;
+    font-size: 64px;
+    top: 12%;
+}
+/*第一屏*/
+
+/*第二屏*/
+.swiper-slide.two{
+    background: url("../img/jisha.gif");
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+.two-hui{
+    width: 75%;
+    margin-top: 20%;
+    
+}
+/*第二屏*/
